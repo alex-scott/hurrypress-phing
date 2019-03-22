@@ -40,7 +40,6 @@ RUN         ln -s /usr/bin/sass /usr/bin/scss
 RUN         /usr/bin/wget https://raw.githubusercontent.com/composer/getcomposer.org/76a7060ccb93902cd7576b67264ad91c8a2700e2/web/installer -O - -q | php -- --quiet
 
 RUN         mkdir -p /opt/composer/
-#COPY        composer.json /opt/composer/composer.json
 
 RUN         pear install Archive_Tar
 
