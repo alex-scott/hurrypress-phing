@@ -14,6 +14,7 @@ RUN         apk update && \
                     ca-certificates graphviz shadow \
                     git git-lfs patch bash tar openssh-client zip \
                     npm \
+		    mysql-client \
                     php7-pear \
                     php7-zip \
                     php7-cli \
@@ -28,6 +29,7 @@ RUN         apk update && \
                     php7-simplexml \
                     php7-tokenizer \
                     php7-xml \
+                    php7-pdo_mysql \
                     php7-xmlwriter && \
             # clean
             rm -rf /var/cache/apk/*
