@@ -1,6 +1,9 @@
 FROM        alpine:3.9
 MAINTAINER  Alex Scott <alex@cgi-central.net>
 
+### BUILD it 
+### docker build -t hurrypress:phing https://github.com/alex-scott/hurrypress-phing
+
 # Prepare environment
 RUN         mkdir -p /opt
 RUN         addgroup -g 1000 phing
@@ -29,6 +32,7 @@ RUN         apk update && \
                     php7-simplexml \
                     php7-tokenizer \
                     php7-xml \
+                    php7-session \
                     php7-pdo_mysql \
                     php7-xmlwriter && \
             # clean
