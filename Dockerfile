@@ -2,7 +2,7 @@ FROM        alpine:3.9
 MAINTAINER  Alex Scott <alex@cgi-central.net>
 
 ### BUILD it 
-### docker build -t hurrypress:phing https://github.com/alex-scott/hurrypress-phing
+### docker build -t hurrypress:phing https://raw.githubusercontent.com/alex-scott/hurrypress-phing/master/Dockerfile
 
 # Prepare environment
 RUN         mkdir -p /opt
