@@ -1,4 +1,4 @@
-FROM        alpine:3.9
+FROM        node:13.8-alpine3.11
 MAINTAINER  Alex Scott <alex@cgi-central.net>
 
 ### BUILD it 
@@ -6,8 +6,8 @@ MAINTAINER  Alex Scott <alex@cgi-central.net>
 
 # Prepare environment
 RUN         mkdir -p /opt
-RUN         addgroup -g 1000 phing
-RUN         adduser -h /opt/composer -s /bin/ash -g "Phing" -u 1000 -D -G phing phing
+RUN         addgroup -g 1100 phing
+RUN         adduser -h /opt/composer -s /bin/ash -g "Phing" -u 1100 -D -G phing phing
 
 # Packages management
 RUN         apk update && \
@@ -52,8 +52,8 @@ RUN         pear install Archive_Tar
 RUN         git lfs install
 
 # Run environment variable, required files, etc.
-ENV         PHING_UID  1000
-ENV         PHING_GID  1000
+ENV         PHING_UID  1100
+ENV         PHING_GID  1100
 ENV         PATH=$PATH:/opt/composer/vendor/bin
 
 CMD         ["/usr/bin/php"]
